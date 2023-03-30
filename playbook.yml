@@ -1,0 +1,13 @@
+---
+- name: Aplicando patches seguranca
+  hosts: instancias_ec2
+  become: true
+  tasks:
+  - name: Listar arquivos
+    find:
+      paths: "~/"
+      file_type: any
+
+  - name: Atualizando lista de pacotes
+    apt: 
+      update_cache: yes
