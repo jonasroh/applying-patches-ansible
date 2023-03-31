@@ -1,13 +1,21 @@
 ---
-- name: Aplicando patches seguranca
+- name: Gerenciando usuários e permissões
   hosts: instancias_ec2
-  become: true
-  tasks:
-  - name: Listar arquivos
-    find:
-      paths: "~/"
-      file_type: any
+  become: yes
 
+  tasks:
   - name: Atualizando lista de pacotes
     apt: 
       update_cache: yes
+
+  - name: Criando um usuário
+    user:
+      name: jonas
+      password: jonasroh
+      shell: /bin/bash
+      groups:
+        - sudo
+      state: present
+      
+
+  
