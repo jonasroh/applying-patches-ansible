@@ -1,0 +1,26 @@
+---
+# tasks file for gerenciarUsers
+- name: Atualizando lista de pacotes
+  apt: 
+    update_cache: yes
+
+
+- name: Ler arquivo csv
+  community.general.read_csv:
+    path: "/home/jonasrodrigues/Documentos/Projetos/applying-patches-ansible/roles/gerenciarUsers/files/usuarios.csv"
+  register: usuarios
+  delegate_to: localhost
+  become: no
+
+- name: instalando passlib
+  apt:
+    name: python3-passlib
+    state: present
+
+- name: Criar usuários
+  user:
+    name: "{{item.nome}}"
+    password: "{{ lookup('pipe', 'mkpasswd --method=sha-512 --rounds=5000 ' + item.senha) }}"
+    groups: "{{item.grupo}}"
+    shell: "{{item.shell}}"
+  with_items: "{{usuarios.list}}"

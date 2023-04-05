@@ -2,20 +2,6 @@
 - name: Gerenciando usuários e permissões
   hosts: instancias_ec2
   become: yes
-
-  tasks:
-  - name: Atualizando lista de pacotes
-    apt: 
-      update_cache: yes
-
-  - name: Criando um usuário
-    user:
-      name: jonas
-      password: jonasroh
-      shell: /bin/bash
-      groups:
-        - sudo
-      state: present
-      
-
-  
+  roles:
+    - gerenciarUsers
+ 

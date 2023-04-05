@@ -1,0 +1,17 @@
+nome,sobrenome,username,senha,grupo,shell,diretorio_home
+Levy,Anselmo,levyanselmo,abc123,adm,/bin/bash,/home/levyanselmo
+Alex,Cabral,alexcabral,abc456,dev,/bin/bash,/home/alexcabral
+Noemi,Alves,noemialves,abc789,dev,/bin/bash,/home/noemialves
+Renê,Boaventura,reneboaventura,xyz123,adm,/bin/bash,/home/reneboaventura
+Bruno,Hermann,brunohermann,xyz456,dev,/bin/bash,/home/brunohermann
+Marcos,Vieira,marcosvieira,xyz789,dev,/bin/bash,/home/marcosvieira
+Fernanda,Barros,fernandabarros,123abc,dev,/bin/bash,/home/fernandabarros
+Fábio,Miguel,fabiomiguel,123xyz,adm,/bin/bash,/home/fabiomiguel
+Julio,Medeiros,juliomedeiros,456abc,adm,/bin/bash,/home/juliomedeiros
+Lucas,Vinicius,lucasvinicius,456xyz,dev,/bin/bash,/home/lucasvinicius
+Adrieny,Dantas,adrienydantas,789abc,dev,/bin/bash,/home/adrienydantas
+Hugo,Lemos,hugolemos,789xyz,adm,/bin/bash,/home/hugolemos
+Yasmin,Luna,yasminluna,abcxyz,dev,/bin/bash,/home/yasminluna
+Cássia,Pena,cassiapena,xyzabc,adm,/bin/bash,/home/cassiapena
+Matheus,Cabral,matheuscabral,def456,dev,/bin/bash,/home/matheuscabral
+
